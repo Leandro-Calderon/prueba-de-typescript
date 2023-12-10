@@ -1,6 +1,10 @@
 class Album {
   title: string;
   songs: string[];
+  constructor(title, songs: string[]) {
+    this.title = title;
+    this.songs = songs;
+  }
 }
 
 class Banda {
@@ -63,15 +67,17 @@ function testClaseBanda() {
 }
 
 function main() {
-    const bandaDePrueba= new Banda(
-        ["Mollo","Luca Prodan","Arnedo","Troglio"],
-        [
-            {title:"LLegando los monos",songs:["a","b","c"]},
-            {title:"After chabon",songs:["d","e","f"]}
-        ]
-    );
-    
- testClaseBanda();
+  const afterChabon = new Album("After Chabon", ["r", "g", "l", "klo"])
+  const bandaDePrueba = new Banda(
+    ["Mollo", "Luca Prodan", "Arnedo", "Troglio"],
+    [afterChabon,
+      { title: "LLegando los monos", songs: ["a", "b", "c"] },
+      { title: "Perdedores hermosos", songs: ["d", "e", "f"] },
+
+    ]
+  );
+
+  testClaseBanda();
 }
 
 main();

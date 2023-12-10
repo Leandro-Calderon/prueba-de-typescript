@@ -1,4 +1,10 @@
-// crear la clase Banda aquí
+var Album = /** @class */ (function () {
+    function Album(title, songs) {
+        this.title = title;
+        this.songs = songs;
+    }
+    return Album;
+}());
 var Banda = /** @class */ (function () {
     function Banda(members, albums) {
         this.members = members;
@@ -52,9 +58,10 @@ function testClaseBanda() {
     }
 }
 function main() {
-    var bandaDePrueba = new Banda(["Mollo", "Luca Prodan", "Arnedo", "Troglio"], [
+    var afterChabon = new Album("After Chabon", ["r", "g", "l", "klo"]);
+    var bandaDePrueba = new Banda(["Mollo", "Luca Prodan", "Arnedo", "Troglio"], [afterChabon,
         { title: "LLegando los monos", songs: ["a", "b", "c"] },
-        { title: "After chabon", songs: ["d", "e", "f"] }
+        { title: "Perdedores hermosos", songs: ["d", "e", "f"] },
     ]);
     testClaseBanda();
 }

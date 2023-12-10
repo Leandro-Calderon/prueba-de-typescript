@@ -64,5 +64,6 @@ function main() {
         { title: "Perdedores hermosos", songs: ["d", "e", "f"] },
     ]);
     testClaseBanda();
+    console.log(bandaDePrueba);
 }
 main();
